@@ -7,14 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    
+   
     @foreach($movies as $movie)
-    <ul>
-        <li>{{ $movie->title }}</li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+    <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Title: {{ $movie->title }}</h5>
+          <h4 class="card-subtitle mb-2 text-muted">Original title: {{ $movie->original_title }}</h6>
+          <time>Publication date: {{ $movie->date }}</time>
+          <p>Vote: {{ $movie->vote }}</p>
+        </div>
+      </div>
+      <hr>
     @endforeach
 
 </body>

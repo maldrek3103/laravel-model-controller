@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\MovieModel;
+use App\Movie;
 
 class MovieController extends Controller
 {
     public function index()
     {
-        $movies = MovieModel::all();
+        $movies = Movie::all();
         return view('home', compact('movies'));
     }
 }
